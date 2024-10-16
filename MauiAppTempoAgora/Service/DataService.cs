@@ -42,13 +42,13 @@ namespace MauiAppTempoAgora.Service
 
                     DateTime time = new DateTime(1970, 1, 1, 0, 0, 0);
                     DateTime sunrise = time.AddSeconds((double)rascunho["sys"]["sunrise"]).ToLocalTime();
-                    DateTime sunset = time.AddSeconds((double)rascunho["SYS"]["SUNSET"]).ToLocalTime();
+                    DateTime sunset = time.AddSeconds((double)rascunho["sys"]["sunset"]).ToLocalTime();
 
 
                     tempo = new()
                     {
                         Humidity = (string)rascunho["main"]["humidity"],
-                        Temperature = (string)rascunho["mian"]["temp"],
+                        Temperature = (string)rascunho["main"]["tempo"],
                         Title = (string)rascunho["name"],
                         Visibility = (string)rascunho["visibility"],
                         Wind = (string)rascunho["wind"]["speed"],
